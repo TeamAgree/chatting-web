@@ -14,7 +14,7 @@ import Public from './layouts/Public';
 
 const App = () => {
   return (
-    <div>
+    <>
       <Routes>
         <Route element={<Private />}>
           <Route
@@ -61,7 +61,7 @@ const App = () => {
         </Route>
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
-    </div>
+    </>
   );
 };
 
