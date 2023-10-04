@@ -83,7 +83,7 @@ const Login = () => {
           <input
             type="text"
             name="id"
-            placeholder="ID"
+            placeholder="EMAIL"
             value={id}
             onChange={onChangeId}
           />
@@ -94,10 +94,13 @@ const Login = () => {
             value={password}
             onChange={onChangePassword}
           />
-          <button type="submit">로그인</button>
+          <button type="submit">Login</button>
           {isError && <p>{errorText}</p>}
+          <div className="link_wrap">
+            <Link to="/forgot">Forgot</Link>
+            <Link to="/signup">Sign Up</Link>
+          </div>
         </Form>
-        <Link to="/signup">회원가입</Link>
       </div>
     </LoginWrap>
   );
