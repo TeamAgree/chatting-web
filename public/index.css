@@ -16,16 +16,35 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
+	color:inherit;
 	vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
+
+*, :after, :before {
+	box-sizing:border-box;
+	flex-shrink:0;
+}
+
+:root {
+	-webkit-tap-highlight-color:transparent;
+	-webkit-text-size-adjust:100%;
+	text-size-adjust:100%;
+	cursor:default;
+	line-height:1.5;
+	overflow-wrap:break-word;
+	-moz-tab-size:4;
+	tab-size:4
+}
+
+html, body {
+	height:100%;
+}
+
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body {
-	line-height: 1;
-}
+
 ol, ul {
 	list-style: none;
 }
@@ -40,4 +59,24 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+img, picture, video, canvas, svg {
+	display: block;
+	max-width:100%;
+}
+button {
+	background:none;
+	border:0;
+	cursor:pointer;
+}
+a {
+	text-decoration:none;
+}
+
+/* input 기본 스타일 초기화 */
+input {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+			outline: none;
 }
