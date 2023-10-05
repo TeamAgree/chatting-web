@@ -3,6 +3,7 @@ import App from './App';
 import { RecoilRoot } from 'recoil';
 import { BrowserRouter } from 'react-router-dom';
 import axios from 'axios';
+import { GlobalStyles } from './styles/common/GlobalStyle';
 
 axios.defaults.baseURL =
   process.env.NODE_ENV === 'production'
@@ -18,6 +19,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <RecoilRoot>
     <BrowserRouter>
+      <GlobalStyles />
       <App />
     </BrowserRouter>
   </RecoilRoot>,
