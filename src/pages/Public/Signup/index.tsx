@@ -6,7 +6,10 @@ import React, {
 import useInput from '../../../hooks/useInput';
 import { Link } from 'react-router-dom';
 import { SignUpProps } from '../../../typings/db';
-import { SignUpWrap, Form } from '../Login/styles';
+import {
+  PublicWrap,
+  Form,
+} from '../../../styles/Public/styles';
 import axios, { AxiosRequestConfig } from 'axios';
 // import { useSetRecoilState } from 'recoil';
 import { EmailValidation } from '../../../utils/validation';
@@ -226,8 +229,8 @@ const Signup = () => {
   ]);
 
   return (
-    <SignUpWrap>
-      <div className="container">
+    <PublicWrap>
+      <div className="container signup">
         <Form onSubmit={onSubmit}>
           <input
             type="text"
@@ -311,11 +314,11 @@ const Signup = () => {
           {isError && <p>{errorText}</p>}
           {/* {isSuccess && <p>{successText}</p>} */}
           <div className="link_wrap">
-            <Link to="/login">Go Login</Link>
+            <Link to="/chat/login">Go Login</Link>
           </div>
         </Form>
       </div>
-    </SignUpWrap>
+    </PublicWrap>
   );
 };
 

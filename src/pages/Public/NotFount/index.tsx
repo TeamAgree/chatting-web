@@ -5,7 +5,7 @@ const NotFound = () => {
     <div>
       <h2>없는 페이지입니다.</h2>
       <p>
-        <Link to="/">home으로 이동</Link>
+        <Link to="/chat">home으로 이동</Link>
       </p>
     </div>
   );
