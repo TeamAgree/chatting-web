@@ -18,44 +18,47 @@ const App = () => {
       <Routes>
         <Route element={<Private />}>
           <Route
-            path="/addChatting"
+            path="/chat/addChatting"
             element={<AddChatting />}
           ></Route>
           <Route
-            path="/addFriend"
+            path="/chat/addFriend"
             element={<AddFriend />}
           ></Route>
           <Route
-            path="/chatList"
+            path="/chat/chatList"
             element={<ChatList />}
           ></Route>
           <Route
-            path="/chatting"
+            path="/chat/chatting"
             element={<Chatting />}
           ></Route>
           <Route
-            path="/friendList"
+            path="/chat/friendList"
             element={<FriendList />}
           ></Route>
           <Route
-            path="/profile"
+            path="/chat/profile"
             element={<Profile />}
           ></Route>
           <Route
-            path="/setting"
+            path="/chat/setting"
             element={<Setting />}
           ></Route>
         </Route>
         <Route element={<Public />}>
           <Route
-            path="/"
+            path="/chat"
             element={
-              <Navigate to="/login" replace={true} />
+              <Navigate to="/chat/login" replace={true} />
             }
           />
-          <Route path="/login" element={<Login />}></Route>
           <Route
-            path="/signup"
+            path="/chat/login"
+            element={<Login />}
+          ></Route>
+          <Route
+            path="/chat/signup"
             element={<Signup />}
           ></Route>
         </Route>
