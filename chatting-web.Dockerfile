@@ -2,16 +2,16 @@
 FROM node:18
 
 # 작업 디렉터리 설정
-WORKDIR /app
+WORKDIR /workspace/chatting-web
 
 # 패키지 파일들을 컨테이너 안으로 복사
-COPY package*.json ./
+COPY ./chatting-web/package*.json ./
 
 # 패키지 설치
 RUN npm install
 
 # 나머지 소스코드와 리소스를 컨테이너 안으로 복사
-COPY . .
+COPY ./chatting-web .
 
 # 앱 빌드
 RUN npm run build
